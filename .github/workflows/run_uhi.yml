@@ -2,7 +2,7 @@ name: Run UHI Script Daily
 
 on:
   schedule:
-    - cron: '20 19 * * *'  # Jam 03:20 WITA = 19:20 UTC
+    - cron: '0 0 * * *'  # Jam 03:20 WITA = 19:20 UTC
   workflow_dispatch:
 
 jobs:
