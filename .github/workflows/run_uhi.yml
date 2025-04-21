@@ -2,7 +2,7 @@ name: Run UHI Script Daily
 
 on:
   schedule:
-    - cron: '44 17 * * *'  
+    - cron: '10 18 * * *'  
   workflow_dispatch:  
 
 jobs:
