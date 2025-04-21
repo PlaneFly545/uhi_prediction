@@ -2,8 +2,8 @@ name: Run UHI Script Daily
 
 on:
   schedule:
-    - cron: '10 17 * * *'  # Setiap hari jam 07.30 WIB (WIB = UTC+7 → cron pakai UTC)
-  workflow_dispatch:  # Bisa dijalankan manual juga dari GitHub
+    - cron: '10 17 * * *' 
+  workflow_dispatch:  
 
 jobs:
   run-script:
