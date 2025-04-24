@@ -49,7 +49,6 @@ for key, kode_wilayah_4 in kode_wilayah_dict.items():
     except Exception as e:
         print(f"[ERROR] Gagal ambil data untuk {key}: {e}")
 
-# Hitung UHI
 uhi_data = {
     "uhi_tating_kemang": {},
     "uhi_tating_parung": {},
@@ -65,11 +64,9 @@ for tanggal in tanggal_harian:
     except KeyError as e:
         print(f"[WARNING] Data suhu tidak lengkap untuk tanggal {tanggal}: {e}")
 
-# Simpan hasil UHI ke JSON
 with open("uhi_result.json", "w") as json_file:
     json.dump(uhi_data, json_file, indent=4)
 
-# Simpan log waktu dijalankan
 timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 with open("uhi_log.txt", "a") as log_file:
     log_file.write(f"Script dijalankan pada: {timestamp}\n")
